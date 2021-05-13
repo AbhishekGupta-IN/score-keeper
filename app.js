@@ -17,8 +17,8 @@ p1btn.addEventListener('click', () => {
         p1Display.innerText = p1Score;
         if (p1Score === maxScore) {
             isOver = true;
-            p1Display.classList.add('winner');
-            p2Display.classList.add('loser');
+            p1Display.classList.add('has-text-success');
+            p2Display.classList.add('has-text-danger');
         }
     }
 })
@@ -29,8 +29,8 @@ p2btn.addEventListener('click', () => {
         p2Display.innerText = p2Score;
         if (p2Score === maxScore) {
             isOver = true;
-            p2Display.classList.add('winner');
-            p1Display.classList.add('loser');
+            p2Display.classList.add('has-text-success');
+            p1Display.classList.add('has-text-danger');
         }
     }
 })
@@ -48,6 +48,6 @@ function reset() {
     p2Score = 0;
     p1Display.innerText = 0;
     p2Display.innerText = 0;
-    p1Display.classList.remove('winner', 'loser');
-    p2Display.classList.remove('winner', 'loser');
+    p1Display.classList.remove('has-text-success', 'has-text-danger');
+    p2Display.classList.remove('has-text-success', 'has-text-danger');
 }
